@@ -1,1 +1,1 @@
-django_and_query
+paracticing django or and 'AND' query and Q object
