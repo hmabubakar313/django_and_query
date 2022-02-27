@@ -7,12 +7,18 @@ from django.db.models import Q
 def hello(request):
     return HttpResponse("Hello World")
 def student(request):
-    student = Student.objects.filter(Q(name='ali')&Q(name='abubakar')) 
+    # student = Student.objects.filter(Q('name'))
+    student = Class.objects.filter(class_number='bscs').only('roll_number')
+    
+    print(student)
+    
+
+
 
     # print(q)
-    for x in student:
-        print(x.name)
-        print(x.father_name)
+    """ for x in student:
+        print(x.class_number)
+        print(x.roll_number) """
         
     return HttpResponse("Hello World")
     
